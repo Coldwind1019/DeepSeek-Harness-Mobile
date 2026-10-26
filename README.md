@@ -14,6 +14,8 @@ DeepSeek Harness Mobile 把 DeepSeek Harness 的完整 Web UI 搬进 Android 手
 - 用 **WebView** 打开本机 `127.0.0.1` 的 DSH 界面
 - 集成 **Shizuku**：让 DSH 里的 agent 获得 shell 权限（截屏、点击、系统命令）
 - 集成 **Dhizuku**：Device Owner 级能力（设备策略、静默安装等）
+- 内置 **ADB**：容器内直接 `adb` 命令，支持无线调试配对/连接，控制其他 Android 设备
+- 内置 **构建工具链**：aapt/javac/d8/apksigner，可在手机内编译 APK
 - 文件"打开方式"面板（仿 MT 管理器：长按设为默认打开应用）
 
 ## 功能特性
@@ -25,6 +27,8 @@ DeepSeek Harness Mobile 把 DeepSeek Harness 的完整 Web UI 搬进 Android 手
 | Shizuku 权限 | shell 级命令执行（uid=2000），支持 `pm`/`settings`/`dumpsys`/截图/输入 |
 | Dhizuku 权限 | Device Owner 代理授权（通过官方 Dhizuku SDK） |
 | 文件打开面板 | 仿 MT 管理器：类型筛选、4 列图标网格、长按设为默认打开方式 |
+| **内置 ADB** | 容器内 `adb`（android-tools-adb 34.x），`adb-connect.sh` 自动扫描无线调试端口完成配对/连接 |
+| **内置构建链** | aapt / javac / d8 / apksigner，可在手机内直接编译打包 APK |
 | 缩放控制 | 桌面视图缩放 50%–150% 滑条 |
 | 通知栏入口 | 运行中从通知栏打开设置 |
 | 前台服务 | 切后台保持运行 |
@@ -43,6 +47,9 @@ Android App (Java)
 ├── SimpleFileProvider  文件共享 provider
 ├── DshService          前台服务（保活 + 通知设置入口）
 └── DshApp / Prefs / TarGzExtractor / ShellService
+
+运行时还内置：android-tools-adb（`/usr/bin/adb`）、`/root/adb-connect.sh`（无线调试配对脚本）、
+build-essential / python3 / git（手机内构建环境）。
 ```
 
 ## 构建
