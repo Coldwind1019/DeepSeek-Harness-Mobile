@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/setup_scroll" android:background="#ff0f1115" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:paddingTop="40.0dip" android:paddingBottom="36.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="20.0dip" android:paddingEnd="20.0dip">
+        <LinearLayout android:orientation="vertical" android:background="@drawable/card_bg" android:padding="22.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="24.0sp" android:textStyle="bold" android:textColor="#ffe8eaed" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="DSH 手机端" />
+            <TextView android:textSize="14.0sp" android:textColor="#ffb0b6c0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:text="连接电脑上的 DeepSeek Harness 网关" />
+            <TextView android:textSize="13.0sp" android:textColor="#ff9aa3b2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" android:text="在电脑端启动「DSH 手机网关」后，把控制台显示的配对链接粘贴到下面；也可以填写电脑 IP 和 6 位配对码。配对链接约 30 天有效，期间无需重复配对。" android:lineSpacingExtra="4.0dip" />
+            <TextView android:textSize="13.0sp" android:textStyle="bold" android:textColor="#ff8ab4f8" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="22.0dip" android:text="方式一 · 配对链接" />
+            <EditText android:textSize="14.0sp" android:id="@id/input_url" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:hint="http://10.234.58.66:38600/?token=..." android:maxLines="1" android:inputType="textUri" />
+            <Button android:textSize="15.0sp" android:id="@id/btn_connect" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="使用配对链接连接" />
+            <TextView android:textSize="13.0sp" android:textColor="#ff6b7280" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="22.0dip" android:text="— 或 —" />
+            <TextView android:textSize="13.0sp" android:textStyle="bold" android:textColor="#ff8ab4f8" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" android:text="方式二 · IP + 配对码" />
+            <TextView android:textSize="13.0sp" android:textColor="#ffb0b6c0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="电脑 IP 地址" />
+            <EditText android:textSize="14.0sp" android:id="@id/input_host" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:hint="例如 10.234.58.66" android:maxLines="1" android:inputType="textUri" />
+            <TextView android:textSize="13.0sp" android:textColor="#ffb0b6c0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="6 位配对码（电脑端控制台显示）" />
+            <EditText android:textSize="16.0sp" android:id="@id/input_code" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:hint="123456" android:maxLines="1" android:maxLength="6" android:inputType="number" />
+            <Button android:textSize="15.0sp" android:id="@id/btn_pair" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="配对并连接" />
+            <TextView android:textSize="13.0sp" android:textColor="#ff8ab4f8" android:id="@id/status_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:minHeight="20.0dip" android:lineSpacingExtra="3.0dip" />
+        </LinearLayout>
+        <TextView android:textSize="12.0sp" android:textColor="#ff5f6875" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" android:text="DSH 手机端 v1.0 · 仅限同一局域网内使用" />
+    </LinearLayout>
+</ScrollView>

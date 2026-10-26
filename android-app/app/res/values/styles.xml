@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppDialogTheme" parent="@android:style/Theme.Material.Dialog.Alert">
+        <item name="android:textColorPrimary">#ffe8eaed</item>
+        <item name="android:textColorSecondary">#ffb0b6c0</item>
+        <item name="android:background">#ff1a1d24</item>
+        <item name="android:colorAccent">#ff4a90e2</item>
+    </style>
+    <style name="AppTheme" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:textColorPrimary">#ffe8eaed</item>
+        <item name="android:textColorSecondary">#ffb0b6c0</item>
+        <item name="android:windowBackground">#ff0f1115</item>
+        <item name="android:textColorHint">#ff6b7280</item>
+        <item name="android:alertDialogTheme">@style/AppDialogTheme</item>
+        <item name="android:colorControlNormal">#ff8a96a8</item>
+        <item name="android:colorControlActivated">#ff4a90e2</item>
+        <item name="android:colorButtonNormal">#ff2a2f3a</item>
+        <item name="android:colorPrimary">#ff1a73e8</item>
+        <item name="android:colorPrimaryDark">#ff0f1115</item>
+        <item name="android:colorAccent">#ff4a90e2</item>
+        <item name="android:statusBarColor">#ff0f1115</item>
+        <item name="android:navigationBarColor">#ff0f1115</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <WebView android:id="@id/webview" android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <TextView android:textSize="13.0sp" android:textColor="#ffe8eaed" android:layout_gravity="end|center|top" android:id="@id/btn_settings" android:background="@drawable/settings_button_bg" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="设置" android:alpha="0.9" android:paddingStart="14.0dip" android:paddingEnd="14.0dip" android:layout_marginEnd="10.0dip" />
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/error_bar" android:background="#f21a1414" android:padding="12.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="13.0sp" android:textColor="#fff2b8b8" android:id="@id/error_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingExtra="3.0dip" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+            <Button android:textSize="14.0sp" android:id="@id/btn_retry" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="重试" android:layout_weight="1.0" android:layout_marginEnd="8.0dip" />
+            <Button android:textSize="14.0sp" android:id="@id/btn_repair" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="重新配对" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

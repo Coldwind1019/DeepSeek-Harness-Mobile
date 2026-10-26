@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="btn_connect" />
+    <item type="id" name="btn_pair" />
+    <item type="id" name="btn_repair" />
+    <item type="id" name="btn_retry" />
+    <item type="id" name="btn_settings" />
+    <item type="id" name="error_bar" />
+    <item type="id" name="error_text" />
+    <item type="id" name="input_code" />
+    <item type="id" name="input_host" />
+    <item type="id" name="input_url" />
+    <item type="id" name="setup_scroll" />
+    <item type="id" name="status_text" />
+    <item type="id" name="webview" />
+</resources>

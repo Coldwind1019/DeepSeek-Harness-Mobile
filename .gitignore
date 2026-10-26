@@ -1,0 +1,25 @@
+# Build outputs
+*.apk
+*.aab
+*.dex
+*.zip
+*.idsig
+build/
+out/
+gen/
+dist/
+
+# Signing
+*.keystore
+*.jks
+*.p12
+
+# IDE
+.idea/
+*.iml
+.gradle/
+local.properties
+
+# Runtime assets (large binary, see docs/BUILD.md)
+android-app/app/assets/runtime/
+lib/
