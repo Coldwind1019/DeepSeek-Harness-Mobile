@@ -29,6 +29,7 @@ DeepSeek Harness Mobile 把 DeepSeek Harness 的完整 Web UI 搬进 Android 手
 | 文件打开面板 | 仿 MT 管理器：类型筛选、4 列图标网格、长按设为默认打开方式 |
 | **内置 ADB** | 容器内 `adb`（android-tools-adb 34.x），`adb-connect.sh` 自动扫描无线调试端口完成配对/连接 |
 | **内置构建链** | aapt / javac / d8 / apksigner，可在手机内直接编译打包 APK |
+| **自动维护** | 启动自检修复原生模块（allow-scripts / node-pty spawn-helper）；自动检查并升级 DSH 新版本（设置内可关） |
 | 缩放控制 | 桌面视图缩放 50%–150% 滑条 |
 | 通知栏入口 | 运行中从通知栏打开设置 |
 | 前台服务 | 切后台保持运行 |
@@ -51,6 +52,12 @@ Android App (Java)
 运行时还内置：android-tools-adb（`/usr/bin/adb`）、`/root/adb-connect.sh`（无线调试配对脚本）、
 build-essential / python3 / git（手机内构建环境）。
 ```
+
+## 自动维护与排障
+
+- 启动时自动执行健康自检：写入 npm `allow-scripts` 配置、修复 `node-pty` 的 spawn-helper 执行位。npm 11 默认拦截 install scripts，这一步保证 DSH 的原生依赖可用。
+- 自动检查 `@deepseek-ai/dsh` 新版本并在后台升级（下次启动生效），设置里可关闭。
+- 若启动白屏：检查日志中是否出现 `install-scripts` 警告或 `dsh exit=1`，本项目的自检会在下次启动自动修复。
 
 ## 构建
 
