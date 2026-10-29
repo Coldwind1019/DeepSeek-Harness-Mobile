@@ -17,6 +17,19 @@ DeepSeek Harness Mobile 把 DeepSeek Harness 的完整 Web UI 搬进 Android 手
 - 内置 **ADB**：容器内直接 `adb` 命令，支持无线调试配对/连接，控制其他 Android 设备
 - 内置 **构建工具链**：aapt/javac/d8/apksigner，可在手机内编译 APK
 - 文件"打开方式"面板（仿 MT 管理器：长按设为默认打开应用）
+- **WebView 自适应**：启动探测本机 WebView 能力，按档位（es2015/es2017）自动获取转译前端到外部存储并应用；内置 26 组 polyfill 运行时自愈
+- **不兼容反馈**：遇到无法识别的 WebView（如定制 ROM），设置内一键生成 GitHub Issue（预填包名/版本/错误），维护者统一适配
+
+> **v3.0-stable 变更**：移除不稳定的内置 GeckoView 引擎（在部分 MTK 设备上加载即崩），改为 WebView 自适应路线；移除内置 ES2017 前端（改为按需下载 `webpatch-*.tgz`）；移除 AI 识别接口，完全离线可运行。
+
+## 下载
+
+| 版本 | 说明 |
+|---|---|
+| `DeepSeek-Harness_3.0-stable.apk` | 最新稳定版（85MB，WebView 自适应） |
+| `webpatch-es2015.tgz` / `webpatch-es2017.tgz` | 转译前端包（App 首次启动按需自动下载，也可手动放入 `DEH/webpatch/`） |
+
+> GeckoView 版本已撤下（不稳定），如需可在历史 Release 中查找。
 
 ## 功能特性
 
