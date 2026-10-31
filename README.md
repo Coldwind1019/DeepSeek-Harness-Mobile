@@ -20,7 +20,21 @@ DeepSeek Harness Mobile 把 DeepSeek Harness 的完整 Web UI 搬进 Android 手
 - **WebView 自适应**：启动探测本机 WebView 能力，按档位（es2015/es2017）自动获取转译前端到外部存储并应用；内置 26 组 polyfill 运行时自愈
 - **不兼容反馈**：遇到无法识别的 WebView（如定制 ROM），设置内一键生成 GitHub Issue（预填包名/版本/错误），维护者统一适配
 
-> **v3.0-stable 变更**：移除不稳定的内置 GeckoView 引擎（在部分 MTK 设备上加载即崩），改为 WebView 自适应路线；移除内置 ES2017 前端（改为按需下载 `webpatch-*.tgz`）；移除 AI 识别接口，完全离线可运行。
+> **v3.0-stable 变更**：移除不稳定的内置 GeckoView 引擎，改为 WebView 自适应路线；移除内置 ES2017 前端（按需下载/本机转译）；**移除 AI 识别接口与 DSH 自动更新**；新增「DSH 版本自选」与「UA 版本检测」。
+
+## WebView 适配策略
+
+| UA 中的 Chrome 版本 | 策略 |
+|---|---|
+| ≥ 119 | 原生前端 + 轻量 polyfill |
+| 94 ~ 118 | 原生前端 + 26 组 polyfill |
+| 49 ~ 93 | 本机转译主前端到 ES2017/ES2015（不转译插件） |
+| < 49 | 提示 + 系统浏览器兜底 |
+
+- **UA 检测**：从 `WebSettings.getDefaultUserAgent()` 解析真实 `Chrome/xx` 版本（华为等定制 WebView 的包名版本不可靠）
+- **检测包目录**：`/storage/emulated/0/DEH/WebView检测安装包/` 下的 APK 会被扫描并记录包名/版本
+- **插件不转译**：插件跟随 DSH 版本；旧 WebView 建议在设置里**降级 DSH 版本**（唯一例外：上传插件 `dsh-client-file-upload` 在白名单内，可转译）
+- **不自动更新 DSH**：设置里提供版本列表，由用户自主选择/切换版本
 
 ## 下载
 
