@@ -22,6 +22,21 @@ DeepSeek Harness Mobile 把 DeepSeek Harness 的完整 Web UI 搬进 Android 手
 
 > **v3.0-stable 变更**：移除不稳定的内置 GeckoView 引擎，改为 WebView 自适应路线；移除内置 ES2017 前端（按需下载/本机转译）；**移除 AI 识别接口与 DSH 自动更新**；新增「DSH 版本自选」与「UA 版本检测」。
 
+
+## 更新日志
+
+### 2026-11-06 · v3.0-stable-hotfix-2
+
+**修复**
+- 修复 npm 安装中断导致 `semver` 缺 `internal/re.js`（启动报 `Cannot find module './internal/re'`）
+  - 安装脚本安装后校验 semver，缺失自动重装；启动自检缺失自动修复
+
+**优化**
+- DSH 版本自选：24h 缓存（离线可用）、安装预检（磁盘/registry）、原子备份、装后校验、失败自动回滚、进度/结果弹窗
+- 构建支持 `PRIVATE=1` 私用版（`assets/private/` 不进仓库）
+
+> 完整更新日志见 [CHANGELOG.md](CHANGELOG.md)。
+
 ## WebView 适配策略
 
 | UA 中的 Chrome 版本 | 策略 |
