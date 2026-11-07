@@ -19,3 +19,13 @@
 
 ### Build
 - 新增 `.gitignore`（排除 `assets/private/`、`out/`、`gen/`、`*.apk`）
+
+## v3.0-stable-hotfix-3（手机能力）
+
+### 新增
+- **视觉**：截图 / 视频帧筛选（see-now 安卓版）/ UI 树读取
+- **听觉**：内录（MediaProjection）+ 离线 ASR（sherpa-onnx 中文）
+- **操作**：无障碍点击/输入/滑动 + 坐标操作
+- **中文输入**：内置 ADBKeyboard IME（广播输入中文）
+- **使用数据**：UsageStatsManager（App 使用统计）
+- **组合**：observe（音频 + 画面 + UI 并行采集，时间对齐）
