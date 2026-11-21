@@ -10,6 +10,16 @@
       "url": "https://github.com/Coldwind1019/DeepSeek-Harness-Mobile/releases/download/kernel-153/cromite-153-arm64.apk",
       "bytes": 305322500,
       "sha256": "dcb233a86d58ca922f8aa08dd4216c9158450866286d727a1358e502e935baa3"
+    },
+    {
+      "id": "129",
+      "chrome": 129,
+      "minSdk": 26,
+      "abi": "arm64-v8a",
+      "file": "cromite-129-arm64.apk",
+      "url": "https://github.com/Coldwind1019/DeepSeek-Harness-Mobile/releases/download/kernel-129/cromite-129-arm64.apk",
+      "bytes": 171389265,
+      "sha256": "af0f46ff03fe0d89b4433c61ee9034d7ba71cb560e32e332c3a5eb7d3018a180"
     }
   ]
 }
