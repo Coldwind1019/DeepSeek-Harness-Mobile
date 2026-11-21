@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "kernels": [
+    {
+      "id": "153",
+      "chrome": 153,
+      "minSdk": 29,
+      "abi": "arm64-v8a",
+      "file": "cromite-153-arm64.apk",
+      "url": "https://github.com/Coldwind1019/DeepSeek-Harness-Mobile/releases/download/kernel-153/cromite-153-arm64.apk",
+      "bytes": 305322500,
+      "sha256": "dcb233a86d58ca922f8aa08dd4216c9158450866286d727a1358e502e935baa3"
+    }
+  ]
+}
